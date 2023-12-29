@@ -1,0 +1,72 @@
+# PROJECT SET_UP & API CONFIGURATION & CALLING:
+_________________________________________________
+
+
+1. npm create vite@latest 
+to be free from unneccesary code.
+2. https://gist.github.com/ShariqAnsari88/09dbadfd81c41b399a30f6eb9f1f9548 and search package.json
+3. Copy and paste in package.json.
+4. npm install
+5. Again go to gist link and copy index.scss file
+ and paste inside index.css and rename it with scss.
+
+6. remove unwanted line from app.jsx
+
+7. copy images from this link https://drive.google.com/file/d/1W1Z8rPPZ4w7clT5jPxzeHkZYhaPJBPIy/view and paste inside assets fiolder.s
+
+8. copy movix-logo.png file into public folder.
+
+9. Now go to index.html and change at line no 5 with movix-logo.png
+
+10. TMDB API Setup now - AXIOSs 
+
+11. https://www.themoviedb.org/signup Register yourself here.
+ username: rajat.rawat
+ pwd: Devansh@1234
+now go to settings-> API down below
+
+12. now create .env file to save api token value.
+
+13. create utils folder inside src and create api.js file 
+and axios and base_URL
+
+14. whenever we do changes in env file , we must restart our server application.
+
+15. Why 2 times api call in network tab ?
+because , in main.jsx--> we have strictmode which checks or confirm, is api coming correct or not ?
+If we remove strictmode , then api will be called only once.
+
+16. REDUX TOOL KITs
+
+# REDUX SETUP & CONFIGURATION:
+_____________________________________
+Create a Redux Store
+-----------------------
+1. create store folder inside src
+https://redux-toolkit.js.org/v--> redux toolkit & react-redux.
+2. Study only from Quick start.
+2.1 create redux store & copy from their site.
+2.2 Create store.js file inside store folder and paste copied code into it.
+2.3 Now, we created store and want to connect with react app and now goto main.jsx file
+
+Provide the Redux Store to React
+---------------------------------
+Do import store  & provider into main.jsx -> line no 5,6.
+Now wrap App component inside provider, and provider takes props actually so we simply pass store value inside it. line no 9 to 11. Now close main.jsx
+
+
+Create a Redux State Slice
+---------------------------
+lets suppose, In our application, there will be many pages like home page, movie page.
+Now if we want to create slice for each page ? means want to create main state. eg, Home se related global state ek object me honi chahiye,
+movie se related ek object honi chahiye, uske liye slice hoti hai.
+agar global state use ni honi, to global slice can create.
+
+1. now create slice file into store folder name homSlice.js
+2. now copy whole code from there and paste in homeSlice.js
+3. now goto store.js, and import the created slice - homeSlice
+4. Now go back to app.js, before we need to google dev tools to test is our store working fine or not ?
+5. install redux dev tools
+6. now open redux dev tools from inspection.
+7. Store.js me jo reducer ke andar key di thi home karke , wo hume redux toolkit me state pe click krke dikhegi , check screenshot i have attached.
+8. there u will see 2 values line 5 to 7 in homeSlice.js
