@@ -70,3 +70,140 @@ agar global state use ni honi, to global slice can create.
 6. now open redux dev tools from inspection.
 7. Store.js me jo reducer ke andar key di thi home karke , wo hume redux toolkit me state pe click krke dikhegi , check screenshot i have attached.
 8. there u will see 2 values line 5 to 7 in homeSlice.js
+9. Now go to  app.js and check to test our api data.
+
+Use Redux State and Actions in React Components
+--------------------------------------------------
+# how to save value in store using usedispatch
+1. import dispatch and usselector in app.js
+2. import  getApiConfiguration action in app.js
+3. if you want to save value inside store,then call action getAPICONFIGURATION from homeSlice , how to do ? we will call using usedispatch
+
+# Now, after saving api data inside a store, hown to use it  ? useSelector come into picture.
+1. Now write useSelector in app.js
+
+# Create home page component
+create pages and component folder inside src
+create header & footer folder inside components
+Inside footer folder-> Folder.jsx & style.scss
+
+create Header.jsx & style.scss inside header folder.s
+
+create folder inside pages -> 404,details,
+explore,home, searchresult.
+
+-> now create heroBanner folder inside home folder, then
+-> create HeroBanner.jsx and style.scss
+-> import HermoBanner inside Home.jsx
+-> now import this Home.jsx into App.jsx
+-> now import from react-router-dom for routing in App.js
+-> Now work on HeroBanner.jsx file.
+
+-> We need to create state for background image changing on every new refresh.
+-> We need to create state for input, what we type , it should be saved.
+-> Jo url saved karwaya hai store, wo store se leni h ..state me
+
+# custom hook
+-----------------
+-> Create hooks folder inside a src & create useFetch.jsx
+-> now import useFtch.jsx inside HeroBanner.jsx
+-> in API response, we backdrop_paths-> url link that we need 
+-> But it must render/call randomly on UI, for that we are usig useEffect in HeroBanner.jsx file 
+# Add React Developer tools --> https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+To Test is our state updating or not ?
+Then go to developer tools -> and Select components.
+
+Then check in store, redux tools 
+Now go to HeroBanner.jsx file
+
+
+
+-> We commented line 27 code , and change function name and api path.
+-> so , check configuratio api on network tab and open backdrop-sizes.
+-> but we need only original value from key in response.
+
+-> check redux store
+-> then check herobanner in redux dev tool 
+-> create lazyLoadImage folder inside components
+-> create img.jsx
+-> create contentWrapper folder inside components
+-> create contentWrapper.jsx and style.scss iside ti
+-> ContentWrapper.jsx-> yaha ek div create kar rkhi h , uss div ko humne ek HOC banaya hua h
+
+-> import img & contentWrapper inside HeroBanner.jsx
+
+-> create mixins.scss file inside src folder.
+
+-> Mixins -> is a feature of Scss which reduces duplicate css
+property and code.
+
+-> import mixins.scss file in hersection styles.scss file
+
+
+# Header component creation with some effects like when we scroll page - heroBanners
+
+ will be hidden and as we go up, it must be shown.
+Go to App.js 
+
+jab bhi aap eventlistern add kare react.js me , try kare usko remove bhi kre for best practices, otherwise memory leakage issue hoskta..
+
+Change in Header.jsx
+and then in home.jsx make height 1000 which is commented now.
+
+Now copy and paste footer.jsx and scss file directly.
+
+Create trending folder inside home and create Tredning.jsxs
+Then import this in Home.jsx
+
+Import contentWrapper inside Trending.jsx
+Trending.scss will be written home.jsx-> style.scss file
+
+Create switchTabs folder inside components and create 
+SwitchTabs.jsx inside it.
+
+-> Import SwitchTabs inside trending.jsx file.
+-> create carousel folder inside components
+-> then import carousel in Trending.jsx 
+-> create folder circlRating inside components
+
+-> promise.all for multiple api call. 
+-> create method in App.js
+-> promise.all --> sath me return karega response
+dono ka resposne sath me ayega.
+
+-> import getGeneres into App.jsx from homeslice.jsx
+
+-> create genres folder inside component folder
+and genres.jsx and style.scss
+
+-> import genres into carousel.jsx
+
+
+-> now work on left and right arrow inside carousel.
+
+-> src -> pages-> home -> Popular folder
+-> src -> pages-> home -> topRated -> TopRated.jsx
+
+
+# now work on details page Details.jsx
+create detailsBanner folder
+and create Detailsbanner.jsx file
+create Playbtn.jsx inside details folder
+
+
+hume api call karwani ha, ek to movie ka data fetch karwane keliye
+or dusra caste data fetch keliye in Details.jsx
+
+Create folder videoPop inside components
+VideoPop.jsx
+import Videop{p[ inside Details banner.jsx]}
+
+Till Carousels -> Recommendation and similarjsx and videoSection is done
+
+# work on Search section
+-----------------------------
+install react-infinite scroll component npm for 
+infinite scrolling 
+App.jsx--> searchResult
+
+explore.jsx
